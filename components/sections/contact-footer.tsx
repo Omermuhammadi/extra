@@ -15,7 +15,7 @@ export function ContactFooter() {
         <div className="flex flex-col justify-center">
           <h3 className="text-3xl md:text-4xl font-heading font-bold mb-8 text-white">Contact Information</h3>
           <p className="text-gray-300 mb-12 text-lg md:text-xl leading-relaxed max-w-lg">
-            Extraordinary Building Cleaning Service (Artillery&apos;s) is ready to deploy. Reach out directly or visit our headquarters.
+            Artillery cleaning Services is ready to deploy. Reach out directly or visit our headquarters.
           </p>
           
           <div className="space-y-8">
@@ -57,7 +57,7 @@ export function ContactFooter() {
       <div className="border-t border-white/10 bg-black/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-400 text-sm text-center md:text-left font-medium">
-            © 2025 Extraordinary Building Cleaning Service (Artillery&apos;s), LLC. All rights reserved.
+            © 2025 Artillery cleaning Services, LLC. All rights reserved.
           </p>
           <ScrollToTopButton />
         </div>

@@ -5,7 +5,7 @@ Our Services
 Why
 FAQ
 Contact Us
-Extraordinary Building Cleaning Service (Artillery's)
+Artillery cleaning Services
 Trusted. Experienced. Year-Round Service.
 We offer professional building cleaning and maintenance services for commercial, residential, and construction clients.
 
@@ -112,5 +112,5 @@ Here a video for Overview About Our Company
 Watch Now
 Reach out today to discuss your service needs or request a quote. We are currently accepting new contracts.
 
-© 2025 Extraordinary Building Cleaning Service (Artillery's), LLC
+© 2025 Artillery cleaning Services, LLC
 Scroll to Top
