@@ -1,0 +1,39 @@
+import type { Config } from "tailwindcss";
+import tailwindcssAnimate from "tailwindcss-animate";
+
+const config: Config = {
+  darkMode: "class",
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+        primary: {
+          DEFAULT: 'var(--primary)',
+          foreground: 'var(--primary-foreground)'
+        },
+        surface: {
+          base: '#f8f9fa',
+          container: '#edeeef',
+          lowest: '#ffffff',
+          low: '#f3f4f5',
+          high: '#e7e8e9',
+          highest: '#e1e3e4',
+          variant: '#e1e3e4'
+        }
+      },
+      fontFamily: {
+        sans: ["Inter", "sans-serif"],
+        heading: ["Plus Jakarta Sans", "sans-serif"]
+      }
+    }
+  },
+  plugins: [tailwindcssAnimate],
+};
+
+export default config;
