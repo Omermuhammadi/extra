@@ -5,20 +5,20 @@ import { ArrowRight } from "lucide-react";
 export function ServicesCTA() {
   return (
     <section className="bg-gray-50 py-24 w-full">
-      <div className="max-w-4xl mx-auto bg-white border border-gray-200 rounded-2xl p-10 md:p-16 text-center shadow-sm">
-        <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
-          Ready to upgrade your facility&apos;s standard of clean?
+      <div className="max-w-4xl mx-auto rounded-2xl border border-gray-200 bg-white p-10 text-center shadow-sm md:p-16">
+        <h2 className="mb-4 text-3xl font-heading font-bold text-gray-900">
+          Need reliable commercial cleaning support?
         </h2>
-        
-        <p className="text-lg text-gray-500 mt-4 mb-8 max-w-2xl mx-auto font-medium">
-          Contact our operations team today to secure a dispatch unit or request an immediate on-site inspection for commercial contracting.
+
+        <p className="mx-auto mt-4 mb-8 max-w-2xl text-lg font-medium text-gray-500">
+          Contact our team to request a site quote for office cleaning, school cleaning, industrial support, or post-construction cleanup.
         </p>
-        
-        <Link 
+
+        <Link
           href="/contact"
-          className="inline-flex items-center justify-center gap-3 px-8 py-3 rounded-md bg-amber-500 hover:bg-amber-600 text-gray-900 font-extrabold text-lg transition-colors shadow-md"
+          className="inline-flex items-center justify-center gap-3 rounded-md bg-amber-500 px-8 py-3 text-lg font-extrabold text-gray-900 shadow-md transition-colors hover:bg-amber-600"
         >
-          Schedule a Site Inspection
+          Request a Site Quote
           <ArrowRight className="w-5 h-5" />
         </Link>
       </div>

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/layout/header";
+import { siteConfig } from "@/lib/site";
+import { MobileActionBar } from "@/components/ui/mobile-action-bar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -15,24 +17,48 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "PRESERVE Infrastructure | Commercial Facility Maintenance",
-  description: "High-end commercial cleaning, office facility maintenance, school janitorial services, and post-construction cleaning in Delaware County, PA and Chester, PA. Moving beyond aesthetics to engineered asset preservation.",
+  metadataBase: new URL(siteConfig.url),
+  title: `${siteConfig.name} | Commercial Cleaning in ${siteConfig.serviceArea}`,
+  description:
+    "Commercial cleaning for offices, schools, industrial facilities, and post-construction sites across Delaware County and Chester, PA.",
   keywords: [
     "Commercial Cleaning",
-    "Office Facility Maintenance",
+    "Office Cleaning",
     "School Janitorial Services",
+    "Industrial Cleaning",
     "Post-Construction Cleaning",
     "Delaware County PA",
     "Chester PA",
-    "B2B Custodial Services",
-    "Facility Management PA"
+    "Facility Cleaning",
+    "Janitorial Services",
   ],
-  authors: [{ name: "PRESERVE Infrastructure" }],
+  authors: [{ name: siteConfig.name }],
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "PRESERVE Infrastructure",
-    description: "Specialized in Commercial Cleaning and Office Facility Maintenance in Delaware County, PA and Chester, PA.",
+    title: `${siteConfig.name} | Commercial Cleaning in ${siteConfig.serviceArea}`,
+    description:
+      "Commercial cleaning for offices, schools, industrial properties, and construction turnover projects in Delaware County and Chester, PA.",
     type: "website",
     locale: "en_US",
+    url: siteConfig.url,
+    siteName: siteConfig.name,
+    images: [
+      {
+        url: "/office-cleaning-services.jpg",
+        width: 1600,
+        height: 900,
+        alt: `${siteConfig.name} commercial cleaning team`,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${siteConfig.name} | Commercial Cleaning in ${siteConfig.serviceArea}`,
+    description:
+      "Commercial cleaning for offices, schools, industrial facilities, and post-construction sites across Delaware County and Chester, PA.",
+    images: ["/office-cleaning-services.jpg"],
   },
 };
 
@@ -47,11 +73,10 @@ export default function RootLayout({
       suppressHydrationWarning
       className={`${inter.variable} ${plusJakartaSans.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-background text-foreground selection:bg-primary-container selection:text-white">
+      <body className="min-h-full flex flex-col bg-background font-sans text-foreground selection:bg-primary-container selection:text-white pb-20 md:pb-0">
         <Header />
-        <main className="flex-1 flex flex-col">
-          {children}
-        </main>
+        <main className="flex-1 flex flex-col">{children}</main>
+        <MobileActionBar />
       </body>
     </html>
   );

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Accordion,
   AccordionContent,
@@ -8,42 +8,51 @@ import {
 
 const faqs = [
   {
-    question: "Do you work with both small businesses and large facilities?",
-    answer: "Yes. Our scalable workforce allows us to seamlessly service intimate corporate office spaces as well as expansive industrial complexes and large-scale educational institutions across Delaware County and Chester, PA."
+    question: "What areas do you serve?",
+    answer:
+      "We provide commercial cleaning across Delaware County and Chester, PA, with a focus on offices, schools, industrial properties, and contractor turnover work.",
   },
   {
-    question: "Can I hire you for one-time cleaning?",
-    answer: "Absolutely. We offer robust one-time deep cleaning and post-construction cleaning services designed to prepare your facility for grand openings or strict compliance audits."
+    question: "Do you handle one-time cleaning and post-construction jobs?",
+    answer:
+      "Yes. We handle one-time deep cleaning, turnover cleaning, and post-construction cleanup in addition to ongoing janitorial support.",
   },
   {
     question: "Are you insured?",
-    answer: "Yes, Artillery's is fully insured. We carry comprehensive liability and workers' compensation coverage tailored for heavy commercial and industrial maintenance, providing you with absolute peace of mind."
+    answer:
+      "If your site requires insurance details as part of the quote review, mention that in your request and we can discuss the current documentation requirements.",
   },
   {
-    question: "How do I request a quote or inspection?",
-    answer: "You can reach out via our contact form below, or call our offices directly to schedule an immediate on-site facility inspection. We deploy customized proposals within 48 hours."
+    question: "How do I request a quote?",
+    answer:
+      "Use the contact form on this site or call our office directly. We review the scope, confirm your service needs, and follow up with the next step quickly.",
   },
   {
-    question: "Do you offer cleaning after renovations or construction?",
-    answer: "Yes. Our post-construction cleanup teams specialize in heavy debris extraction, HEPA-filtered dusting, and fine polishing so contractors can hand over impeccable sites to their clients."
-  }
+    question: "Who do you typically work with?",
+    answer:
+      "We work with facility managers, office managers, schools, commercial property contacts, and contractors who need reliable commercial cleaning support.",
+  },
 ];
 
 export function FAQ() {
   return (
     <section className="py-24 bg-background">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-3xl md:text-5xl font-heading font-bold tracking-tight text-primary text-center mb-16">
+        <h2 className="mb-16 text-center text-3xl font-heading font-bold tracking-tight text-primary md:text-5xl">
           Frequently Asked Questions
         </h2>
-        
+
         <Accordion className="w-full">
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="border-border/50 py-2">
-              <AccordionTrigger className="text-left text-lg md:text-xl font-heading text-primary font-bold hover:text-amber-500 transition-colors">
+            <AccordionItem
+              key={index}
+              value={`item-${index}`}
+              className="border-border/50 py-2"
+            >
+              <AccordionTrigger className="text-left text-lg font-heading font-bold text-primary transition-colors hover:text-amber-500 md:text-xl">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="text-muted-foreground text-base md:text-lg leading-relaxed pt-2 pb-6">
+              <AccordionContent className="pt-2 pb-6 text-base leading-relaxed text-muted-foreground md:text-lg">
                 {faq.answer}
               </AccordionContent>
             </AccordionItem>

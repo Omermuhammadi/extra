@@ -5,48 +5,47 @@ import { Shield, MapPin, Clock } from "lucide-react";
 
 export function Hero() {
   return (
-    <section className="relative flex flex-col w-full bg-background mt-[-1px]">
-      {/* Main Hero Area */}
-      {/* Min height ensures it commands the viewport, while flex-col handles internal stacking */}
-      <div className="relative min-h-[85vh] flex flex-col justify-center overflow-hidden">
-        
-        {/* Background Image Container */}
+    <section className="relative flex w-full flex-col bg-background">
+      <div className="relative flex min-h-[85vh] flex-col justify-center overflow-hidden">
         <div className="absolute inset-0 z-0 bg-muted">
-          <Image 
-            src="/Gemini_Generated_Image_rnj7xirnj7xirnj7.png" 
-            alt="Professional commercial cleaning staff meticulously polishing a facility floor" 
+          <Image
+            src="/Gemini_Generated_Image_rnj7xirnj7xirnj7.png"
+            alt="Professional commercial cleaning staff meticulously polishing a facility floor"
             fill
             sizes="100vw"
             quality={45}
             className="object-cover object-center"
             priority
           />
-          {/* Deep gradient mask ONLY on the far left to shield text. Pure transparency on the right. */}
-          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/90 via-gray-900/60 to-transparent w-full md:w-[80%] lg:w-[65%]" />
-          
-          {/* Mobile-only gradient for 100% legibility when stacked */}
-          <div className="absolute inset-0 bg-gray-900/80 block md:hidden" />
+          <div className="absolute inset-0 w-full bg-gradient-to-r from-gray-900/90 via-gray-900/60 to-transparent md:w-[80%] lg:w-[65%]" />
+          <div className="absolute inset-0 block bg-gray-900/80 md:hidden" />
         </div>
 
-        {/* Foreground Content (Strictly Left-Aligned) */}
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 pt-32 pb-24 md:py-32">
           <div className="max-w-2xl">
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-extrabold text-white leading-tight tracking-tight mb-8 drop-shadow-lg">
-              Premium Commercial &<br className="hidden md:block"/> Industrial Cleaning
+            <h1 className="mb-8 font-heading text-5xl font-extrabold leading-tight tracking-tight text-white drop-shadow-lg md:text-6xl lg:text-7xl">
+              Commercial Cleaning for
+              <br className="hidden md:block" /> Demanding Facilities
             </h1>
-            
-            <div className="bg-gray-900/40 backdrop-blur-[6px] border-l-[6px] border-amber-500 pl-6 py-5 pr-6 rounded-r-xl shadow-2xl mb-10 max-w-2xl transform transition-transform hover:scale-[1.01] duration-300 relative overflow-hidden group">
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
-              <p className="text-lg md:text-[1.35rem] text-white leading-relaxed font-semibold drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] tracking-wide">
-                Uncompromising standards for facility managers, schools, and general contractors across Delaware County & Chester, PA.
+
+            <div className="group relative mb-10 max-w-2xl overflow-hidden rounded-r-xl border-l-[6px] border-amber-500 bg-gray-900/40 py-5 pl-6 pr-6 shadow-2xl backdrop-blur-[6px] transition-transform duration-300 hover:scale-[1.01]">
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-r from-amber-500/10 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+              <p className="text-lg font-semibold leading-relaxed tracking-wide text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)] md:text-[1.35rem]">
+                Reliable cleaning support for offices, schools, industrial properties, and post-construction sites across Delaware County & Chester, PA.
               </p>
             </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 rounded-md bg-amber-500 hover:bg-amber-600 text-gray-900 font-bold shadow-2xl transition-all hover:scale-[1.02] duration-300">
-                Request a Site Inspection
+
+            <div className="flex flex-col gap-4 sm:flex-row">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-md bg-amber-500 px-8 py-4 font-bold text-gray-900 shadow-2xl transition-all duration-300 hover:scale-[1.02] hover:bg-amber-600"
+              >
+                Request a Site Quote
               </Link>
-              <Link href="/services" className="inline-flex items-center justify-center px-8 py-4 rounded-md backdrop-blur-md bg-white/10 border border-white/30 text-white font-bold shadow-lg hover:bg-white/20 transition-colors duration-300">
+              <Link
+                href="/services"
+                className="inline-flex items-center justify-center rounded-md border border-white/30 bg-white/10 px-8 py-4 font-bold text-white shadow-lg backdrop-blur-md transition-colors duration-300 hover:bg-white/20"
+              >
                 View Our Services
               </Link>
             </div>
@@ -54,56 +53,50 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Solid High-End Proof Bar (Detached completely below the image) */}
-      <div className="w-full bg-primary border-t-4 border-amber-500 shadow-xl relative z-20">
+      <div className="relative z-20 w-full border-t-4 border-amber-500 bg-primary shadow-xl">
         <div className="max-w-7xl mx-auto px-4 py-8 md:py-10">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-6">
-            
-            {/* Proof Point 1 */}
-            <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-4">
-              <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                <Shield className="w-7 h-7 text-amber-500" />
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-3 md:gap-6">
+            <div className="flex flex-col items-center gap-4 text-center md:flex-row md:items-start md:text-left">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white/10">
+                <Shield className="h-7 w-7 text-amber-500" />
               </div>
-              <div className="flex flex-col justify-center h-full">
-                <span className="text-white font-heading font-bold text-lg md:text-xl leading-tight">
-                  Fully Insured & Bonded
+              <div className="flex h-full flex-col justify-center">
+                <span className="font-heading text-lg font-bold leading-tight text-white md:text-xl">
+                  Commercial-Only Focus
                 </span>
-                <span className="text-amber-500 text-sm font-semibold tracking-wider mt-1 uppercase">
-                  Protected Operations
+                <span className="mt-1 text-sm font-semibold uppercase tracking-wider text-amber-500">
+                  Offices, Schools, Industrial, Turnover
                 </span>
               </div>
             </div>
-            
-            {/* Proof Point 2 */}
-            <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-4">
-              <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                <MapPin className="w-7 h-7 text-amber-500" />
+
+            <div className="flex flex-col items-center gap-4 text-center md:flex-row md:items-start md:text-left">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white/10">
+                <MapPin className="h-7 w-7 text-amber-500" />
               </div>
-              <div className="flex flex-col justify-center h-full">
-                <span className="text-white font-heading font-bold text-lg md:text-xl leading-tight">
+              <div className="flex h-full flex-col justify-center">
+                <span className="font-heading text-lg font-bold leading-tight text-white md:text-xl">
                   Delaware County & Chester
                 </span>
-                <span className="text-amber-500 text-sm font-semibold tracking-wider mt-1 uppercase">
-                  Local Pennsylvania Hub
+                <span className="mt-1 text-sm font-semibold uppercase tracking-wider text-amber-500">
+                  Local Pennsylvania Service Area
                 </span>
               </div>
             </div>
-            
-            {/* Proof Point 3 */}
-            <div className="flex flex-col md:flex-row items-center md:items-start text-center md:text-left gap-4">
-              <div className="w-14 h-14 rounded-full bg-white/10 flex items-center justify-center shrink-0">
-                <Clock className="w-7 h-7 text-[#428aff]" />
+
+            <div className="flex flex-col items-center gap-4 text-center md:flex-row md:items-start md:text-left">
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-white/10">
+                <Clock className="h-7 w-7 text-[#428aff]" />
               </div>
-              <div className="flex flex-col justify-center h-full">
-                <span className="text-white font-heading font-bold text-lg md:text-xl leading-tight">
-                  Available 24/7/365
+              <div className="flex h-full flex-col justify-center">
+                <span className="font-heading text-lg font-bold leading-tight text-white md:text-xl">
+                  Quote-Friendly Process
                 </span>
-                <span className="text-[#428aff] text-sm font-semibold tracking-wider mt-1 uppercase">
-                  Rapid Deployment
+                <span className="mt-1 text-sm font-semibold uppercase tracking-wider text-[#428aff]">
+                  Clear Scope And Next Step
                 </span>
               </div>
             </div>
-            
           </div>
         </div>
       </div>

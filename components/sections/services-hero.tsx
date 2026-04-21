@@ -7,7 +7,7 @@ import { ArrowRight } from "lucide-react";
 
 export function ServicesHero() {
   return (
-    <section className="pt-24 pb-8 px-4 w-full relative overflow-hidden">
+    <section className="relative w-full overflow-hidden px-4 pt-24 pb-8">
       <Image
         src="/images/w.png"
         alt="Cleaning professionals in action"
@@ -18,25 +18,26 @@ export function ServicesHero() {
 
       <div className="absolute inset-0 bg-gradient-to-r from-gray-900/95 via-gray-900/60 to-transparent" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="relative z-10 max-w-7xl mx-auto">
         <div className="max-w-3xl text-left">
-          <span className="text-amber-500 font-mono text-sm uppercase tracking-widest mb-3 block">
+          <span className="mb-3 block font-mono text-sm uppercase tracking-widest text-amber-500">
             Our Services
           </span>
-          <h1 className="text-4xl md:text-5xl font-extrabold font-heading text-white tracking-tight mb-4 leading-tight">
-            Commercial Cleaning &<br/>
-            Facility Maintenance Services
+          <h1 className="mb-4 text-4xl font-heading font-extrabold leading-tight tracking-tight text-white md:text-5xl">
+            Commercial Cleaning Services
+            <br />
+            For Local Facility Buyers
           </h1>
-          
-          <p className="text-base md:text-xl text-gray-100 font-medium leading-relaxed mb-8">
-            We offer professional building cleaning and maintenance services for commercial, residential, and construction clients.
+
+          <p className="mb-8 text-base font-medium leading-relaxed text-gray-100 md:text-xl">
+            Explore office cleaning, school cleaning, industrial cleaning, and post-construction support across Delaware County and Chester, PA.
           </p>
 
-          <Link 
+          <Link
             href="/contact"
-            className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-md bg-amber-500 hover:bg-amber-600 text-gray-900 font-extrabold text-lg transition-colors shadow-lg"
+            className="inline-flex items-center justify-center gap-3 rounded-md bg-amber-500 px-8 py-4 text-lg font-extrabold text-gray-900 shadow-lg transition-colors hover:bg-amber-600"
           >
-            Request a Custom Quote
+            Request a Site Quote
             <ArrowRight className="w-5 h-5" />
           </Link>
         </div>

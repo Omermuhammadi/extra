@@ -26,7 +26,7 @@ export function IndustriesHero() {
           href="/contact"
           className="inline-flex items-center justify-center gap-3 px-8 py-4 rounded-md bg-amber-500 hover:bg-amber-600 text-gray-900 font-extrabold text-lg transition-colors shadow-lg"
         >
-          Request a Custom Quote
+          Request a Site Quote
           <ArrowRight className="w-5 h-5" />
         </Link>
       </div>

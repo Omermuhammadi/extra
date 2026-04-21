@@ -1,63 +1,91 @@
-import React from 'react';
-import { Phone, Mail, Printer, MapPin, Clock } from 'lucide-react';
-import { ContactFooterForm } from '@/components/sections/contact-footer-form';
-import { ScrollToTopButton } from '@/components/ui/scroll-to-top-button';
+import React from "react";
+import Link from "next/link";
+import { Phone, Mail, Printer, MapPin, Clock } from "lucide-react";
+import { ContactFooterForm } from "@/components/sections/contact-footer-form";
+import { ScrollToTopButton } from "@/components/ui/scroll-to-top-button";
+import { siteConfig } from "@/lib/site";
 
 export function ContactFooter() {
   return (
     <footer className="bg-primary text-white">
-      {/* Main Contact Section */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24 grid lg:grid-cols-2 gap-16 lg:gap-24">
-        
+      <div className="max-w-7xl mx-auto grid gap-16 px-4 py-24 sm:px-6 lg:grid-cols-2 lg:gap-24 lg:px-8">
         <ContactFooterForm />
 
-        {/* Right: Contact Context */}
         <div className="flex flex-col justify-center">
-          <h3 className="text-3xl md:text-4xl font-heading font-bold mb-8 text-white">Contact Information</h3>
-          <p className="text-gray-300 mb-12 text-lg md:text-xl leading-relaxed max-w-lg">
-            Artillery cleaning Services is ready to deploy. Reach out directly or visit our headquarters.
+          <h3 className="mb-8 text-3xl font-heading font-bold text-white md:text-4xl">
+            Contact Information
+          </h3>
+          <p className="mb-12 max-w-lg text-lg leading-relaxed text-gray-300 md:text-xl">
+            Reach out for a site quote, service questions, or a walkthrough request for your facility.
           </p>
-          
+
           <div className="space-y-8">
             <div className="flex items-center gap-6 text-gray-200">
-              <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0">
-                <Phone className="w-6 h-6 text-amber-500" />
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/5">
+                <Phone className="h-6 w-6 text-amber-500" />
               </div>
-              <span className="text-lg font-medium">610-329-0240</span>
+              <a
+                href={siteConfig.phoneHref}
+                className="text-lg font-medium transition-colors hover:text-white"
+              >
+                {siteConfig.phoneDisplay}
+              </a>
             </div>
             <div className="flex items-center gap-6 text-gray-200">
-              <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0">
-                <Mail className="w-6 h-6 text-amber-500" />
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/5">
+                <Mail className="h-6 w-6 text-amber-500" />
               </div>
-              <span className="text-lg font-medium">Wkirk777@aol.com</span>
+              <a
+                href={siteConfig.emailHref}
+                className="break-all text-lg font-medium transition-colors hover:text-white"
+              >
+                {siteConfig.email}
+              </a>
             </div>
             <div className="flex items-center gap-6 text-gray-200">
-              <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0">
-                <Printer className="w-6 h-6 text-amber-500" />
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/5">
+                <Printer className="h-6 w-6 text-amber-500" />
               </div>
-              <span className="text-lg font-medium">Fax: 610-872-2005</span>
+              <span className="text-lg font-medium">Fax: {siteConfig.faxDisplay}</span>
             </div>
             <div className="flex items-center gap-6 text-gray-200">
-              <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0">
-                <MapPin className="w-6 h-6 text-amber-500" />
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/5">
+                <MapPin className="h-6 w-6 text-amber-500" />
               </div>
-              <span className="text-lg font-medium">413 Franklin Street<br/>Chester, Pennsylvania 19013</span>
+              <span className="text-lg font-medium">
+                Based in {siteConfig.baseLocation}
+                <br />
+                Serving {siteConfig.serviceArea}
+              </span>
             </div>
-            <div className="flex items-center gap-6 text-gray-200 pt-6 border-t border-white/10">
-              <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center shrink-0">
-                <Clock className="w-6 h-6 text-amber-500" />
+            <div className="flex items-center gap-6 border-t border-white/10 pt-6 text-gray-200">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-white/5">
+                <Clock className="h-6 w-6 text-amber-500" />
               </div>
-              <span className="text-lg font-bold">Opening Hours:<br/><span className="text-gray-400 font-medium tracking-wide">Monday – Saturday | 8:00 AM – 6:00 PM</span></span>
+              <span className="text-lg font-bold">
+                Opening Hours:
+                <br />
+                <span className="font-medium tracking-wide text-gray-400">
+                  {siteConfig.hoursDisplay}
+                </span>
+              </span>
+            </div>
+            <div className="pt-2">
+              <Link
+                href="/how-quotes-work"
+                className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-[0.18em] text-amber-400 transition-colors hover:text-white"
+              >
+                Learn how quotes work
+              </Link>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Bottom Footer Bar */}
       <div className="border-t border-white/10 bg-black/20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-gray-400 text-sm text-center md:text-left font-medium">
-            © 2025 Artillery cleaning Services, LLC. All rights reserved.
+        <div className="max-w-7xl mx-auto flex flex-col items-center justify-between gap-4 px-4 py-6 sm:px-6 lg:flex-row lg:px-8">
+          <p className="text-center text-sm font-medium text-gray-400 md:text-left">
+            (c) {new Date().getFullYear()} {siteConfig.name}. All rights reserved.
           </p>
           <ScrollToTopButton />
         </div>

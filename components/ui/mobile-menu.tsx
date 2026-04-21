@@ -7,6 +7,7 @@ import { Menu, X } from "lucide-react";
 const mobileItems = [
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
+  { name: "Service Areas", href: "/service-areas" },
   { name: "Industries", href: "/industries" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
